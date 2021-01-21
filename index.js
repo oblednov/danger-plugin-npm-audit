@@ -1,4 +1,3 @@
-"use strict";
 const exec = require("child_process").exec;
 
 const getSummary = (metadata = {}) => {
@@ -46,6 +45,6 @@ export default async function npmAudit(options = {}) {
       warn(severityline);
     }
   } catch (err) {
-    fail("npm audit plugin error: " + error.message);
+    fail("npm audit plugin error: " + err.message);
   }
 }
